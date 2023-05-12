@@ -13,6 +13,10 @@
           "no-api": true
         },
         {
+          "type": "vcs",
+          "url": "https://github.com/barbun/scaffold-tooling.git"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "harvesthq/chosen",
@@ -41,7 +45,7 @@
         "php": "^8.1",
         "govcms/govcms-custom": "*",
         "govcms/govcms": "2.x-master-dev",
-        "govcms/scaffold-tooling": "9.x-master-dev",
+        "govcms/scaffold-tooling": "dev-feature/GOVCMS-4997_db-restore",
         "drush/drush": "^10"
     },
     "require-dev": {
