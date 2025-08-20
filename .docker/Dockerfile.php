@@ -5,7 +5,7 @@
 ARG CLI_IMAGE
 ARG GOVCMS_IMAGE_VERSION={{ GOVCMS_VERSION }}.x-latest
 
-FROM cli_base_image as cli
+FROM ${CLI_IMAGE} as cli
 FROM govcms/php:${GOVCMS_IMAGE_VERSION}
 
 # Clean up base image so as not to conflict with any changes.
