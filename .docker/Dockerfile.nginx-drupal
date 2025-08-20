@@ -5,7 +5,7 @@
 ARG CLI_IMAGE
 ARG GOVCMS_IMAGE_VERSION={{ GOVCMS_VERSION }}.x-latest
 
-FROM ${CLI_IMAGE} as cli
+FROM cli_base_image as cli
 FROM govcms/nginx-drupal:${GOVCMS_IMAGE_VERSION}
 
 ENV WEBROOT=web
