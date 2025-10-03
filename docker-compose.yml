@@ -41,6 +41,7 @@ x-environment: &default-environment
   HTTPAV_ENDPOINT: http://av:3993/scan
   HTTPAV_RETURN_KEY: comodo
   HTTP_PAYLOAD_KEY: malware
+  SOLR_MODULES: ${SOLR_MODULES:-extraction,langid,ltr,analysis-extras}
 
 services:
 
@@ -145,6 +146,7 @@ services:
   #     dockerfile: .docker/Dockerfile.solr
   #     args:
   #       GOVCMS_IMAGE_VERSION: *govcms-image-version
+  #       LAGOON_IMAGE_VERSION: ${LAGOON_IMAGE_VERSION:-latest}
   #   labels:
   #     lagoon.type: solr
   #     lagoon.base.image: govcms/solr:${GOVCMS_IMAGE_VERSION:-10.x-latest}
