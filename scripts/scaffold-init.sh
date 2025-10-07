@@ -40,8 +40,8 @@ if [[ "$GOVCMS_TYPE" != "saas" && "$GOVCMS_TYPE" != "paas" && "$GOVCMS_TYPE" != 
   exit 2
 fi
 
-if [[ "$GOVCMS_VERSION" != "7" && "$GOVCMS_VERSION" != "8" && "$GOVCMS_VERSION" != "9" && "$GOVCMS_VERSION" != "10" ]]; then
-  echo "[error]: Valid scaffold version required, must be (7, 8, 9, 10)."
+if [[ "$GOVCMS_VERSION" != "10" && "$GOVCMS_VERSION" != "11" ]]; then
+  echo "[error]: Valid scaffold version required, must be (10, 11)."
   exit 2
 fi
 
