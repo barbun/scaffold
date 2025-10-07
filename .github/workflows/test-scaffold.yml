@@ -34,6 +34,7 @@ jobs:
         govcms_image:
           - "10.x-latest"
           - "10.x-edge"
+          - "11.x-edge"
         project_type:
           - saas
           - paas
