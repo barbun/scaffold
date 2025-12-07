@@ -98,8 +98,6 @@ rm -rf .github
 if [[ "$GOVCMS_TYPE" == "paas" ]]; then
   rm .docker/Dockerfile*saas*
   rm -r themes
-  rm composer.8.json
-  rm composer.9.json
   rm composer.10.json
 else
   rm .docker/Dockerfile*paas*
