@@ -58,6 +58,13 @@ jobs:
           docker compose version
 
       -
+        name: Install Ahoy
+        run: |
+          sudo wget -qO /usr/local/bin/ahoy https://github.com/ahoy-cli/ahoy/releases/latest/download/ahoy-bin-linux-amd64
+          sudo chmod +x /usr/local/bin/ahoy
+          ahoy --version
+
+      -
         name: Setup Docker network
         run: docker network prune -f >/dev/null 2>&1 && docker network inspect amazeeio-network >/dev/null 2>&1 || docker network create amazeeio-network >/dev/null 2>&1 || true
 
