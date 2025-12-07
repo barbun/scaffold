@@ -99,6 +99,7 @@ if [[ "$GOVCMS_TYPE" == "paas" ]]; then
   rm .docker/Dockerfile*saas*
   rm -r themes
   rm composer.10.json
+  rm composer.11.json
 else
   rm .docker/Dockerfile*paas*
   rm -r .docker/config
