@@ -10,11 +10,13 @@ usage () {
   cat <<HELP_USAGE
   Prepare the scaffold directory for project use.
   Usage:
-    $ scaffold.sh -t <type> -v <version> -n <name>
+    $ ahoy init <name> <type> <version>
+    OR
+    $ scaffold-init.sh -n <name> -t <type> -v <version>
     -h    Print this message
-    -t    Type of GovCMS project to scaffold
-    -v    Version of GovCMS (7|8|9|10)
     -n    Name of project (machine name)
+    -t    Type of GovCMS project to scaffold (saas|paas|saasplus)
+    -v    Version of GovCMS (10|11)
 HELP_USAGE
   exit 2
 }
@@ -23,7 +25,7 @@ finish () {
   echo "[success]: Scaffold created!"; rm "$self"
 }
 
-while getopts 'h:n:v:t:' o
+while getopts 'hn:v:t:' o
 do
   case $o in
     t ) GOVCMS_TYPE=$OPTARG ;;
